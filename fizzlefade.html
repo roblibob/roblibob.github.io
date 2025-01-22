@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<canvas id="canvas" width="320" height="200"></canvas>
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const width = canvas.width;
+  const height = canvas.height;
+
+  // draw something initially
+  let imgData = ctx.createImageData(width, height);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const i = (y * width + x) * 4;
+      imgData.data[i + 0] = x;     // red
+      imgData.data[i + 1] = y;     // green
+      imgData.data[i + 2] = 128;   // blue
+      imgData.data[i + 3] = 255;   // alpha
+    }
+  }
+  ctx.putImageData(imgData, 0, 0);
+
+  // draw one pixel in red
+  function fizzlePixel(x, y) {
+    const data = ctx.getImageData(x, y, 1, 1);
+    data.data[0] = 255; // red
+    data.data[1] = 0;   // green
+    data.data[2] = 0;   // blue
+    data.data[3] = 255; // alpha
+    ctx.putImageData(data, x, y);
+  }
+  const LOW_BITS = 0xff;
+  const HIGH_BITS = 0x1ff00;
+  const TAP = 0x12000;
+
+  // states for the LFSR
+  let randomValue = 1;
+  let finished = false;
+
+  function fizzleStep() {
+    // process a limited number of pixels each frame
+    for (let i = 0; i < 500; i++) {
+      // if we've come full circle on the LFSR and it's not our first iteration,
+      // that means we're done
+      if (randomValue === 1 && i !== 0) {
+        finished = true;
+        break;
+      }
+
+      const y = randomValue & LOW_BITS;           // low 8 bits
+      const x = (randomValue & HIGH_BITS) >> 8; // next 9 bits
+
+      // shift the register if the least significant bit is set
+      // XOR in the tap bits
+      const lsb = randomValue & 1;
+      randomValue >>>= 1;
+      if (lsb) {
+          randomValue ^= TAP;
+      }
+    
+      // draw a red pixel if it's in bounds
+      if (x < width && y < height) {
+        fizzlePixel(x, y);
+      }
+    }
+
+    if (!finished) {
+      // schedule the next chunk
+      requestAnimationFrame(fizzleStep);
+    }
+  }
+
+  // start the fade
+  requestAnimationFrame(fizzleStep);
+</script>
+</body>
+</html>
