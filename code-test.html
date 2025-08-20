@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter code</title>
+  <!-- Load Noto Sans Mono from Google Fonts -->
+  <link href="test_files/css2.css" rel="stylesheet">
+  <style>
+    /* Use a universal box‐sizing rule so sizing is predictable */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Set body styles to create a simple, centred layout */
+    body {
+      font-family: 'Noto Sans Mono', monospace;
+      margin: 0;
+      padding: 0;
+      /* Use a light grey background reminiscent of iOS system backgrounds */
+      background-color: #f2f2f7;
+      color: #1c1c1e;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Main container for all content */
+    .container {
+      max-width: 600px;
+      width: calc(100% - 2rem);
+      padding: 2.5rem 2rem;
+      background-color: #ffffff;
+      border-radius: 24px;
+      /* Subtle shadow to lift the card off the background */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    /* Large title text */
+    .title {
+      margin: 0;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    /* Subtitle text below the inputs */
+    .subtitle {
+      margin-top: 0.8rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      color: #8e8e93;
+    }
+
+    /* Layout for the code input boxes */
+    .code-inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem 0;
+      flex-wrap: nowrap;
+    }
+
+    /* Individual code input boxes */
+    .code-inputs input {
+      flex: none;
+      width: 42px;
+      height: 46px;
+      margin: 0 0.25rem;
+      border: 1px solid #dcdcdc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      font-size: 1.25rem;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      color: #1c1c1e;
+    }
+
+    /* Highlight the input on focus */
+    .code-inputs input:focus {
+      border-color: #0a84ff;
+      box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.25);
+      background-color: #ffffff;
+    }
+
+    /* Remove spinner arrows for number inputs on Chrome */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    /* Static dashes between code groups */
+    .dash {
+      margin: 0 0.2rem;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: #8e8e93;
+      user-select: none;
+    }
+    /* The dash immediately before the hardcoded market code has slightly less right margin */
+    .market-dash {
+      margin-left: 0.25rem;
+      margin-right: 0.1rem;
+    }
+    /* The hardcoded market code (e.g., "SE") */
+    .market {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1c1c1e;
+      margin-left: 0.1rem;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Update the heading text to only "enter code" as requested -->
+    <h1 class="title">enter code</h1>
+    <!-- Wrap the inputs in a form so that we can submit it when full -->
+    <form id="code-form" action="#" method="post" autocomplete="off">
+      <div class="code-inputs">
+        <!-- Timestamp (3 characters) -->
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Timestamp digit 1" value="S">
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Timestamp digit 2" value="D">
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Timestamp digit 3" value="C">
+        <span class="dash">-</span>
+        <!-- Uniqueness (4 characters) -->
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Uniqueness digit 1" value="3">
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Uniqueness digit 2" value="D">
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Uniqueness digit 3" value="D">
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Uniqueness digit 4" value="A">
+        <span class="dash">-</span>
+        <!-- Planner + Version (3 characters) -->
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Planner" value="A">
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Version digit 1" value="0">
+        <input class="code-input" type="text" inputmode="numeric" pattern="[0-9A-Za-z]*" maxlength="1" aria-label="Version digit 2" value="1">
+        <span class="dash market-dash">-</span><span class="market">SE</span>
+      </div>
+    </form>
+    <p class="subtitle">Enter the full code to continue.</p>
+  </div>
+
+  <script>
+    // Handle multi-part code entry with dashes and a hardcoded market suffix
+    (function() {
+      // Select only the input fields for the code (not the dashes or market text)
+      const fields = Array.from(document.querySelectorAll('.code-input'));
+      const form = document.getElementById('code-form');
+
+      // Helper to construct the final code string with dashes and the hardcoded market code
+      function buildCode() {
+        const values = fields.map(f => f.value.toUpperCase());
+        const timestamp = values.slice(0, 3).join('');
+        const uniqueness = values.slice(3, 7).join('');
+        const plannerVersion = values.slice(7, 10).join('');
+        return `${timestamp}-${uniqueness}-${plannerVersion}-SE`;
+      }
+
+      fields.forEach((field, idx) => {
+        field.addEventListener('input', (e) => {
+          // Always uppercase the character and restrict input to a single character
+          let val = e.target.value.toUpperCase();
+          if (val.length > 1) {
+            val = val.charAt(0);
+          }
+          e.target.value = val;
+
+          // Move focus to the next input when a character is entered
+          if (val && idx < fields.length - 1) {
+            fields[idx + 1].focus();
+          }
+
+          // If all fields are filled, trigger the submission logic
+          const allFilled = fields.every(f => f.value && f.value.length === 1);
+          if (allFilled) {
+            const code = buildCode();
+            // Prevent any default form submission behaviour and show the alert
+            e.preventDefault();
+            alert(`Submitting code: ${code}`);
+            // If you want to submit to a server, uncomment the line below
+            // form.submit();
+          }
+        });
+
+        field.addEventListener('keydown', (e) => {
+          // On backspace in an empty field, move focus back to the previous input
+          if (e.key === 'Backspace' && e.target.value === '' && idx > 0) {
+            fields[idx - 1].focus();
+          }
+        });
+      });
+    })();
+  </script>
+
+</body></html>
