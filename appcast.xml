@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Minute</title>
+        <item>
+            <title>0.5</title>
+            <pubDate>Sun, 18 Jan 2026 20:47:33 +0100</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.5/Minute-0.5.dmg" length="18635630" type="application/octet-stream"/>
+        </item>
+    </channel>
+</rss>
