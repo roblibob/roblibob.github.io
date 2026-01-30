@@ -3,6 +3,14 @@
     <channel>
         <title>Minute</title>
         <item>
+            <title>0.11.0</title>
+            <pubDate>Fri, 30 Jan 2026 11:12:42 +0100</pubDate>
+            <sparkle:version>10</sparkle:version>
+            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.11.0/Minute-0.11.0.zip" length="18061189" type="application/octet-stream" sparkle:edSignature="ZfutmC/J94JveDX7HoEbz/9JygPXg1QjwNxCIykYBZYwIUwf+Vgz/Kdjlc4nPAPxGvtE7LbaCS6oXEXB64ANAw=="/>
+        </item>
+        <item>
             <title>0.10.0</title>
             <pubDate>Mon, 26 Jan 2026 19:27:03 +0100</pubDate>
             <sparkle:version>9</sparkle:version>
