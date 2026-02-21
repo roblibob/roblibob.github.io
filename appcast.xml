@@ -8,7 +8,7 @@
             <sparkle:version>26</sparkle:version>
             <sparkle:shortVersionString>0.18.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.18.0/Minute-0.18.2.zip" length="23184546" type="application/octet-stream" sparkle:edSignature="hHspNOX5RKvjQ4NTNSRGooya9cicR9OgW9RYbksn03Ohg+wjL3snIJkXz6vZiRBFhZNZHP5inUMpZ8KQuXptAg=="/>
+            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.18.2/Minute-0.18.2.zip" length="23184546" type="application/octet-stream" sparkle:edSignature="hHspNOX5RKvjQ4NTNSRGooya9cicR9OgW9RYbksn03Ohg+wjL3snIJkXz6vZiRBFhZNZHP5inUMpZ8KQuXptAg=="/>
         </item>
         <item>
             <title>0.18.0</title>
