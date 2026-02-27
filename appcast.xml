@@ -3,12 +3,20 @@
     <channel>
         <title>Minute</title>
         <item>
+            <title>0.19.0</title>
+            <pubDate>Thu, 26 Feb 2026 14:03:11 +0100</pubDate>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.19.0/Minute-0.19.0.zip" length="23640745" type="application/octet-stream" sparkle:edSignature="snRCHjDJjycGMJtfLw8cptnaqK3+BkR1cskc/45aQx8m2Lyd7fSPVnJAY9lRcyg3ZmFScvZAC4uL2FegIY9yAA=="/>
+        </item>
+        <item>
             <title>0.18.2</title>
             <pubDate>Sat, 21 Feb 2026 19:22:42 +0100</pubDate>
             <sparkle:version>26</sparkle:version>
             <sparkle:shortVersionString>0.18.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.18.2/Minute-0.18.2.zip" length="23184546" type="application/octet-stream" sparkle:edSignature="hHspNOX5RKvjQ4NTNSRGooya9cicR9OgW9RYbksn03Ohg+wjL3snIJkXz6vZiRBFhZNZHP5inUMpZ8KQuXptAg=="/>
+            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.19.0/Minute-0.18.2.zip" length="23223664" type="application/octet-stream" sparkle:edSignature="SMHRcnxGb7nYXcC3zYxOvJY9n1Osp5Gu0ezggApYed9Zjss2pMSPtQPYyLq1l2rV/6wOLLMrmBuuhBiY397PDw=="/>
         </item>
         <item>
             <title>0.18.0</title>
@@ -17,14 +25,6 @@
             <sparkle:shortVersionString>0.18.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.18.0/Minute-0.18.0.zip" length="23094631" type="application/octet-stream" sparkle:edSignature="0A7MpaJI5l/VdbVvdq3jaQ5x9yTkvzSFiZtJ0NoJ0CWR8rlf1Y15nUi/xleBC70VzTyWb6C9sK5wLXrb1JK6AA=="/>
-        </item>
-        <item>
-            <title>0.17.0</title>
-            <pubDate>Mon, 16 Feb 2026 18:48:10 +0100</pubDate>
-            <sparkle:version>22</sparkle:version>
-            <sparkle:shortVersionString>0.17.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/roblibob/Minute/releases/download/v0.17.0/Minute-0.17.0.zip" length="19424810" type="application/octet-stream" sparkle:edSignature="IUZ7jAisQRZ+HqiP7JLh01K0KnLiJu11PtHsXpF3mprTx6qzVucsKpDAqTNjMZR0R+BC+Keq2xa+ghC/QAHPAQ=="/>
         </item>
     </channel>
 </rss>
